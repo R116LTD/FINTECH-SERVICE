@@ -19,6 +19,8 @@ import com.fasterxml.jackson.databind.node.ObjectNode;
  */
 @CorsComposition.Cors
 public class SecurityController extends Controller {
+  
+    private static final long serialVersionUID = 1L;
 
     public final static String AUTH_TOKEN_HEADER = "X-AUTH-TOKEN";
     public static final String AUTH_TOKEN = "authToken";
