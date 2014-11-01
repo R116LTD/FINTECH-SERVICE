@@ -46,6 +46,7 @@ public class SecurityController extends Controller {
       String[] authComp = auth.split(" ");
       String basic = new String(new sun.misc.BASE64Decoder().decodeBuffer(authComp[1]));
       String[] credentials = basic.split(":");
+      Logger.debug("credentials => " + credentials[0] + " : " + credentials[1]);
       User user = User.findByEmailAddressAndPassword(credentials[0], credentials[1]);
       
         if (user == null) {
